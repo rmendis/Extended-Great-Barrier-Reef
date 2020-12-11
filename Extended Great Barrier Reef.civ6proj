@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Extended Great Barrier Reef</Name>
+    <Guid>0d4f955c-7d7a-472c-9436-750d19339852</Guid>
+    <ProjectGuid>c505adf5-a553-4d13-890d-9b332ea5e868</ProjectGuid>
+    <ModVersion>2</ModVersion>
+    <Teaser>An extended Great Barrier Reef from the Outback Tycoon scenario (for Standard Rules)</Teaser>
+    <Description>A 6 tile extended Great Barrier Reef like the one in the Outback Tycoon scenario. This replaces the 2 tile Great Barrier Reef **STANDARD RULES ONLY**. For R&amp;F and GS there are reef as a feature. This mod is to compensate for the lack of reef in Standard Rules (for maps that support the Extended GBR).</Description>
+    <Authors>blkbutterfly74</Authors>
+    <SpecialThanks>Firaxis</SpecialThanks>
+    <AffectsSavedGames>false</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>Extended Great Barrier Reef</AssemblyName>
+    <RootNamespace>Extended Great Barrier Reef</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="UpdateDatabase"><Criteria>StandardRules</Criteria><Criteria>StandardRules</Criteria><File>XML/ExtendedGBR.xml</File></UpdateDatabase></InGameActions>]]></InGameActionData>
+    <AssociationData><![CDATA[<Associations />]]></AssociationData>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+    <FrontEndActionData><![CDATA[<FrontEndActions />]]></FrontEndActionData>
+    <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="StandardRules"><RuleSetInUse>RULESET_STANDARD</RuleSetInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XML\ExtendedGBR.xml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
