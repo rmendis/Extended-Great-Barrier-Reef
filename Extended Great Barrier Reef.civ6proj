@@ -5,7 +5,7 @@
     <Name>Extended Great Barrier Reef</Name>
     <Guid>0d4f955c-7d7a-472c-9436-750d19339852</Guid>
     <ProjectGuid>c505adf5-a553-4d13-890d-9b332ea5e868</ProjectGuid>
-    <ModVersion>2</ModVersion>
+    <ModVersion>3</ModVersion>
     <Teaser>An extended Great Barrier Reef from the Outback Tycoon scenario (for Standard Rules)</Teaser>
     <Description>A 6 tile extended Great Barrier Reef like the one in the Outback Tycoon scenario. This replaces the 2 tile Great Barrier Reef **STANDARD RULES ONLY**. For R&amp;F and GS there are reef as a feature. This mod is to compensate for the lack of reef in Standard Rules (for maps that support the Extended GBR).</Description>
     <Authors>blkbutterfly74</Authors>
@@ -16,20 +16,33 @@
     <SupportsHotSeat>true</SupportsHotSeat>
     <AssemblyName>Extended Great Barrier Reef</AssemblyName>
     <RootNamespace>Extended Great Barrier Reef</RootNamespace>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="UpdateDatabase"><Criteria>StandardRules</Criteria><Criteria>StandardRules</Criteria><File>XML/ExtendedGBR.xml</File></UpdateDatabase></InGameActions>]]></InGameActionData>
-    <AssociationData><![CDATA[<Associations />]]></AssociationData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="UpdateDatabase"><Properties><LoadOrder>1</LoadOrder></Properties><File>SQL/ExtendedGBR.sql</File></UpdateDatabase><ImportFiles id="ImportNaturalWonderGenerator"><Properties><LoadOrder>10</LoadOrder></Properties><File>Scripts/NaturalWonderGenerator.lua</File></ImportFiles><UpdateText id="UpdateText"><File>SQL/Text.sql</File></UpdateText></InGameActions>]]></InGameActionData>
+    <AssociationData><![CDATA[<Associations>
+  <Reference type="Dlc" title="Expansion: Rise and Fall" id="1B28771A-C749-434B-9053-D1380C553DE9" />
+  <Reference type="Dlc" title="Expansion: Gathering Storm" id="4873eb62-8ccc-4574-b784-dda455e74e68" />
+</Associations>]]></AssociationData>
     <CompatibleVersions>1.2,2.0</CompatibleVersions>
-    <FrontEndActionData><![CDATA[<FrontEndActions />]]></FrontEndActionData>
+    <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="UpdateFrontEnd"><File>SQL/Config.sql</File></UpdateDatabase><UpdateText id="UpdateText"><File>SQL/Text.sql</File></UpdateText></FrontEndActions>]]></FrontEndActionData>
     <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="StandardRules"><RuleSetInUse>RULESET_STANDARD</RuleSetInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="XML" />
+    <Folder Include="SQL" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="XML\ExtendedGBR.xml">
+    <Content Include="Scripts\NaturalWonderGenerator.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SQL\Config.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SQL\ExtendedGBR.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SQL\Text.sql">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
