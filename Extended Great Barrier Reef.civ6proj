@@ -7,7 +7,7 @@
     <ProjectGuid>c505adf5-a553-4d13-890d-9b332ea5e868</ProjectGuid>
     <ModVersion>3</ModVersion>
     <Teaser>An extended Great Barrier Reef from the Outback Tycoon scenario (for Standard Rules)</Teaser>
-    <Description>A 6 tile extended Great Barrier Reef like the one in the Outback Tycoon scenario. This replaces the 2 tile Great Barrier Reef **STANDARD RULES ONLY**. For R&amp;F and GS there are reef as a feature. This mod is to compensate for the lack of reef in Standard Rules (for maps that support the Extended GBR).</Description>
+    <Description>A 6 tile extended Great Barrier Reef like the one in the Outback Tycoon scenario. This replaces the 2 tile Great Barrier Reef.</Description>
     <Authors>blkbutterfly74</Authors>
     <SpecialThanks>Firaxis</SpecialThanks>
     <AffectsSavedGames>false</AffectsSavedGames>
